@@ -1,0 +1,20 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 375px;
+}
+
+.playerCard {
+  padding: 10px 10px;
+}
+
+.playerForm {
+
+}
+
+.secondaryCheckboxes {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
