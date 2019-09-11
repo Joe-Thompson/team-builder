@@ -3,10 +3,11 @@ import { PlayerPositions } from "./PlayerData";
 
 
 function PlayerForm (props) {
+    console.log(props);
     const [playerData, setPlayerData] = useState({
         name: '',
         primaryPosition: '',
-        secondaryPosition: ['']
+        playerNotes: ''
     });
 
     const changeHandler = event => {
@@ -19,7 +20,6 @@ function PlayerForm (props) {
             ...playerData,
             id: Date.now()
         };
-        console.log(newPlayer);
         props.addNewPlayerData(newPlayer);
     };
 
@@ -28,10 +28,10 @@ function PlayerForm (props) {
             <label htmlFor='Name'>Player Name</label>
             <input type='text' id='name' name='name' value={playerData.name} onChange={changeHandler} />
 
-            <label htmlFor='Position'>Primary Position</label>
-            <select id='Position'>
+            <label htmlFor='primaryPosition'>Primary Position</label>
+            <select id='Position' name='primaryPosition' onChange={changeHandler} >
 
-                <option value={playerData.primaryPosition['']} name='primaryPosition' onChange={changeHandler} > - - Choose a Position - - </option>
+                <option value={playerData.primaryPosition} name='primaryPosition' > - - Choose a Position - - </option>
                 {PlayerPositions.map((item) => {
                     return (
                         <option key={item} value={item} name='primaryPosition' onChange={changeHandler} >{item}</option>
@@ -39,19 +39,12 @@ function PlayerForm (props) {
                 })}
             </select>
 
-            {PlayerPositions.map((item) => {
-                return (
-                    <div>
-                        <input key={item} value={playerData.secondaryPosition['']} type='checkbox' name='secondaryPosition' onChange={changeHandler} />
-                        <label htmlFor={item} onChange={changeHandler} >{item}</label>
-                    </div>
-            )
-            })}
-
+            <label htmlFor='playerNotes' >Player Notes</label>
+            <textarea name='playerNotes' onChange={changeHandler} />
 
             <button type='submit' >Save Player</button>
         </form>
     )
-};
+}
 
 export default PlayerForm;

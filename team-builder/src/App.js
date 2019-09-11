@@ -5,7 +5,11 @@ import PlayerCard from "./components/Playercard";
 import PlayerForm from "./components/PlayerForm";
 
 function App() {
-  const [player, setPlayer] = useState([]);
+  const [player, setPlayer] = useState([{
+    name: '',
+    primaryPosition: '',
+    playerNotes: ''
+  }]);
 
     useEffect(() => {
       setPlayer(PlayerData);
@@ -14,7 +18,7 @@ function App() {
     const addNewPlayerData = playerNew => {
       setPlayer([...player, playerNew]);
     };
-
+console.log(player);
   return (
     <div className="App">
       {player.map((item, index) => {

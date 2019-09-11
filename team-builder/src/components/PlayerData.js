@@ -1,7 +1,7 @@
 const PlayerData = [
     {   name: 'Joe Thompson',
         primaryPosition: 'First Base',
-        secondaryPosition: ['Pitcher', 'Second Base', 'Third Base'],
+        playerNotes: 'Great glove and decent at the plate, but slow baserunner'
     }
 ];
 

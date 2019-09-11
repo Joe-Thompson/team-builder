@@ -6,7 +6,7 @@ function PlayerCard ({props}) {
         <div className='playerCard'>
             <h3>{props.name}</h3>
             <h4>Primary Position - {props.primaryPosition} </h4>
-            <p>Secondary Position - {props.secondaryPosition.map((item) => item )}</p>
+            <p>Player Notes - {props.playerNotes}</p>
         </div>
     )
 };
