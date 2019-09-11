@@ -21,6 +21,7 @@ function App() {
 console.log(player);
   return (
     <div className="App">
+      <img className='neganLogo' src='https://i.pinimg.com/originals/41/5e/2a/415e2ad3ce963b65721716044b724706.jpg' alt='missing' />
       {player.map((item, index) => {
         return (
             <PlayerCard key={index} props={item}  />

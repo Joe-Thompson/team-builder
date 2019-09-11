@@ -20,16 +20,25 @@ function PlayerForm (props) {
             ...playerData,
             id: Date.now()
         };
+        reset(props);
         props.addNewPlayerData(newPlayer);
     };
 
+    function reset () {
+        setPlayerData({
+            name: '',
+            primaryPosition: '',
+            playerNotes: ''
+        });
+    }
+
     return(
         <form onSubmit={submitForm} className='playerForm'>
-            <label htmlFor='Name'>Player Name</label>
-            <input type='text' id='name' name='name' value={playerData.name} onChange={changeHandler} />
+            <label className='nameFormField' htmlFor='Name'>Player Name</label>
+            <input className='nameFormInput' type='text' id='name' name='name' value={playerData.name} onChange={changeHandler} />
 
-            <label htmlFor='primaryPosition'>Primary Position</label>
-            <select id='Position' name='primaryPosition' onChange={changeHandler} >
+            <label className='positionFormField' htmlFor='primaryPosition'>Primary Position</label>
+            <select className='positionFormDropDown' id='Position' name='primaryPosition' onChange={changeHandler} >
 
                 <option value={playerData.primaryPosition} name='primaryPosition' > - - Choose a Position - - </option>
                 {PlayerPositions.map((item) => {
@@ -39,8 +48,8 @@ function PlayerForm (props) {
                 })}
             </select>
 
-            <label htmlFor='playerNotes' >Player Notes</label>
-            <textarea name='playerNotes' onChange={changeHandler} />
+            <label className='playerNoteFormField' htmlFor='playerNotes' >Player Notes</label>
+            <textarea className='playerNoteFormInput' name='playerNotes' onChange={changeHandler} />
 
             <button type='submit' >Save Player</button>
         </form>

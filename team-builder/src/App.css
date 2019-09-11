@@ -3,6 +3,17 @@
   flex-direction: column;
   margin: 0 auto;
   width: 375px;
+  background-color: crimson;
+  color: white;
+}
+
+.neganLogo {
+  width: 350px;
+  height: 400px;
+  border-radius: 8rem;
+  display: flex;
+  align-self: center;
+  padding-top: 15px;
 }
 
 .playerCard {
@@ -10,11 +21,51 @@
 }
 
 .playerForm {
-
-}
-
-.secondaryCheckboxes {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  flex-direction: column;
+  width: 365px;
 }
+
+.nameFormField {
+  margin: .5rem;
+}
+
+.nameFormInput {
+  margin-bottom: 2rem;
+  width: 340px;
+  margin-left: 8px;
+}
+
+.positionFormField {
+  margin: .5rem;
+}
+
+.positionFormDropDown {
+  margin-bottom: 2rem;
+  width: 340px;
+  margin-left: 8px;
+}
+
+.playerNoteFormField {
+  margin: .5rem;
+}
+
+.playerNoteFormInput {
+  margin-bottom: 1.5rem;
+  margin-left: 8px;
+  width: 340px;
+}
+
+button {
+  width: 8rem;
+  margin: 0 auto;
+  border-radius: 4rem;
+  color: white;
+  background-color: black;
+  margin-bottom: 2rem;
+}
+
+/*h1 {*/
+/*  margin: 0 auto;*/
+/*  width: auto;*/
+/*}*/
